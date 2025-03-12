@@ -1,6 +1,5 @@
 from flask import *
 from flask import flash
-from flask_login import *
 from forms import *
 import datetime
 
@@ -14,8 +13,6 @@ app.config["SECRET_KEY"] = "secret_key"
 
 @app.route("/", methods=["GET", "POST"])
 def all_days():
-    if current_user.is_authenticated:
-        return redirect("/inventory_see")
     form = AutorisationForm()
     return render_template(
         "auth_templates/login.html", title="Авторизация", form=form, message=""
