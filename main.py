@@ -14,7 +14,7 @@ app.config["SECRET_KEY"] = "secret_key"
 @app.route("/", methods=["GET", "POST"])
 def all_days():
     form = AutorisationForm()
-    data = ["23 января"]
+    data = ["23 января 2023 года", [(1, True), (1, False), (2, True), (1, False)]]
     return render_template(
         "all_days.html", title="Просмотр всех дней", form=form, message="", data=data)
 

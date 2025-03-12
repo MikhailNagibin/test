@@ -2,11 +2,21 @@
 
 {% block content %}
 <h3>Просмотр всех дней</h3>
-<div class="centered-form">
-    <div class="form-container">
-        <h4>{{ data[0] }}</h4>
-    </div>
-</div>
+<h4>{{ data[0] }}</h4>
+
+<table class="table table-bordered">
+    <tbody>
+    {% for item in data[1] %}
+        <tr>
+            <td class="room-cell {{ 'light' if item[1] else 'dark' }}">
+                {{ item[0] }}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+
 
 {% endblock %}
 
