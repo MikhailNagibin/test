@@ -17,3 +17,8 @@ light_number int,
 is_on bool,
 foreign key (date_id) references dates(id)
 );
+
+create table answer (
+data_id int,
+room int
+);

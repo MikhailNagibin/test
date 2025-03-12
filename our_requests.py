@@ -1,5 +1,6 @@
 import json
 import psycopg2
+import requests
 
 def get_db_connection() -> psycopg2.extensions.connection:
     with open("config.json") as f:

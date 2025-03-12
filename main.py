@@ -19,8 +19,6 @@ def all_days():
     )
 
 
-
-
 if __name__ == "__main__":
     # conn = get_db_connection()
     # cur = conn.cursor()
