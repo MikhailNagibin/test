@@ -15,7 +15,7 @@ app.config["SECRET_KEY"] = "secret_key"
 def all_days():
     form = AutorisationForm()
     return render_template(
-        "auth_templates/login.html", title="Авторизация", form=form, message=""
+        "all_days.html", title="Просмотр всех дней", form=form, message=""
     )
 
 
